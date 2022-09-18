@@ -1,0 +1,2857 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-image: url(EldenRing.png);
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    background-attachment: fixed;
+}
+
+.navbar{
+    display: flex;
+    height: 65px;
+    justify-content: center;
+    position: sticky;
+    z-index: 1;
+    background-color: rgb(37, 35, 35);
+    top: 0;
+    cursor: pointer;
+}
+
+.navlist{
+    width: 50%;
+    height: 65px;
+    display: flex;
+    align-items: center;
+}
+
+.navlist li{
+    list-style: none;
+    padding: 20px 30px;
+}
+
+.navlist li a{
+    text-decoration: none;
+    font-size: 13px;
+    color: rgb(197, 188, 188);
+}
+
+.navlist li a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.navlist li a i{
+    padding-left: 5px;
+}
+
+.rightnav{
+    width: 50%;
+    padding-top: 17px;
+    text-align: right;
+}
+
+#search{
+    width: 200px;
+    height: 33px;
+    margin-right: 10px;
+    background: rgb(50, 50, 50);
+    padding: 5px;
+    font-size: 17px;
+    border: 2px solid grey;
+    border-radius: 5px;
+}
+
+/* Sub Menu for Weapons */
+
+.sub_menu1
+{
+    display: none;
+    z-index: 9999;
+}
+
+.navlist li:hover .sub_menu1
+{
+    display: block;
+    position: absolute;
+    background: rgb(255, 255, 255);
+    margin-top: 7px;
+    margin-left: -5px;
+    border-top: 1px;
+    border-radius: 2px;
+}
+
+.navlist li:hover .sub_menu1 ul
+{
+    display: block;
+    margin-left: 10px;
+}
+
+.navlist li:hover .sub_menu1 ul li a
+{
+    color: black;
+    font-size: 16px;
+}
+
+.navlist li:hover .sub_menu1 ul li a:hover
+{
+    text-decoration: underline;
+}
+
+.navlist li:hover .sub_menu1 ul li:hover
+{
+    background-color: rgb(234, 226, 226);
+}
+
+.sub_menu1 ul li img[src="Weapon_Icons/dagger.png"]
+{
+    height: 20px;
+    width: 30px;
+    padding-right: 10px;
+}
+
+.sub_menu1 ul li img[src="Weapon_Icons/sword.png"]
+{
+    height: 20px;
+    width: 30px;
+    padding-right: 10px;
+}
+
+.sub_menu1 ul li img[src="Weapon_Icons/battle-axe.png"]
+{
+    height: 20px;
+    width: 30px;
+    padding-right: 10px;
+}
+
+.sub_menu1 ul li img[src="Weapon_Icons/hammer.png"]
+{
+    height: 20px;
+    width: 30px;
+    padding-right: 10px;
+}
+
+.sub_menu1 ul li img[src="Weapon_Icons/flail.png"]
+{
+    height: 20px;
+    width: 30px;
+    padding-right: 10px;
+}
+
+.sub_menu1 ul li img[src="Weapon_Icons/spear.png"]
+{
+    height: 20px;
+    width: 30px;
+    padding-right: 10px;
+}
+
+.sub_menu1 ul li img[src="Weapon_Icons/scythe.png"]
+{
+    height: 20px;
+    width: 30px;
+    padding-right: 10px;
+}
+
+.sub_menu1 ul li img[src="Weapon_Icons/whip.png"]
+{
+    height: 20px;
+    width: 30px;
+    padding-right: 10px;
+}
+
+.sub_menu1 ul li img[src="Weapon_Icons/claw.png"]
+{
+    height: 20px;
+    width: 30px;
+    padding-right: 10px;
+}
+
+.sub_menu1 ul li img[src="Weapon_Icons/bow.png"]
+{
+    height: 20px;
+    width: 30px;
+    padding-right: 10px;
+}
+
+/* Sub Menu for Armor */
+
+.sub_menu2
+{
+    display: none;
+    z-index: 9999;
+}
+
+.navlist li:hover .sub_menu2
+{
+    display: block;
+    position: absolute;
+    background: rgb(255, 255, 255);
+    margin-top: 7px;
+    margin-left: -5px;
+    border-top: 1px;
+    border-radius: 2px;
+}
+
+.navlist li:hover .sub_menu2 ul
+{
+    display: block;
+    margin-left: 10px;
+}
+
+.navlist li:hover .sub_menu2 ul li a
+{
+    color: black;
+    font-size: 16px;
+}
+
+.navlist li:hover .sub_menu2 ul li a:hover
+{
+    text-decoration: underline;
+}
+
+.navlist li:hover .sub_menu2 ul li:hover
+{
+    background-color: rgb(234, 226, 226);
+}
+
+.sub_menu2 ul li img[src="Armor_Icons/Helm.png"]
+{
+    height: 20px;
+    width: 30px;
+    padding-right: 10px;
+}
+
+.sub_menu2 ul li img[src="Armor_Icons/Chest Piece.png"]
+{
+    height: 20px;
+    width: 30px;
+    padding-right: 10px;
+}
+
+.sub_menu2 ul li img[src="Armor_Icons/Gauntlets.png"]
+{
+    height: 20px;
+    width: 30px;
+    padding-right: 10px;
+}
+
+.sub_menu2 ul li img[src="Armor_Icons/Greaves.png"]
+{
+    height: 20px;
+    width: 30px;
+    padding-right: 10px;
+}
+
+/* Sub Menu for Sorceries */
+
+.sub_menu3
+{
+    display: none;
+    z-index: 9999;
+}
+
+.navlist li:hover .sub_menu3
+{
+    display: block;
+    position: absolute;
+    background: rgb(255, 255, 255);
+    margin-top: 7px;
+    margin-left: -5px;
+    border-top: 1px;
+    border-radius: 2px;
+}
+
+.navlist li:hover .sub_menu3 ul
+{
+    display: block;
+    margin-left: 10px;
+}
+
+.navlist li:hover .sub_menu3 ul li a
+{
+    color: black;
+    font-size: 16px;
+}
+
+.navlist li:hover .sub_menu3 ul li a:hover
+{
+    text-decoration: underline;
+}
+
+.navlist li:hover .sub_menu3 ul li:hover
+{
+    background-color: rgb(234, 226, 226);
+}
+
+.sub_menu3 ul li img[src="Sorcery_Icons/Primeval.png"]
+{
+    height: 20px;
+    width: 30px;
+    padding-right: 10px;
+}
+
+.sub_menu3 ul li img[src="Sorcery_Icons/Cold.png"]
+{
+    height: 20px;
+    width: 30px;
+    padding-right: 10px;
+}
+
+.sub_menu3 ul li img[src="Sorcery_Icons/Death.png"]
+{
+    height: 20px;
+    width: 30px;
+    padding-right: 10px;
+}
+
+.sub_menu3 ul li img[src="Sorcery_Icons/Glintstone.png"]
+{
+    height: 20px;
+    width: 30px;
+    padding-right: 10px;
+}
+
+.sub_menu3 ul li img[src="Sorcery_Icons/Carian.png"]
+{
+    height: 20px;
+    width: 30px;
+    padding-right: 10px;
+}
+
+.sub_menu3 ul li img[src="Sorcery_Icons/Gravity.png"]
+{
+    height: 20px;
+    width: 30px;
+    padding-right: 10px;
+}
+
+.sub_menu3 ul li img[src="Sorcery_Icons/Lava.png"]
+{
+    height: 20px;
+    width: 30px;
+    padding-right: 10px;
+}
+
+.sub_menu3 ul li img[src="Sorcery_Icons/Death.png"]
+{
+    height: 20px;
+    width: 30px;
+    padding-right: 10px;
+}
+
+/* Sub Menu for Incantations */
+
+.sub_menu4
+{
+    display: none;
+    z-index: 9999;
+}
+
+.navlist li:hover .sub_menu4
+{
+    display: block;
+    position: absolute;
+    background: rgb(255, 255, 255);
+    margin-top: 7px;
+    margin-left: -5px;
+    border-top: 1px;
+    border-radius: 2px;
+}
+
+.navlist li:hover .sub_menu4 ul
+{
+    display: block;
+    margin-left: 10px;
+}
+
+.navlist li:hover .sub_menu4 ul li a
+{
+    color: black;
+    font-size: 16px;
+}
+
+.navlist li:hover .sub_menu4 ul li a:hover
+{
+    text-decoration: underline;
+}
+
+.navlist li:hover .sub_menu4 ul li:hover
+{
+    background-color: rgb(234, 226, 226);
+}
+
+.sub_menu4 ul li img[src="Incantation_Icons/Giant's_Flame.png"]
+{
+    height: 20px;
+    width: 30px;
+    padding-right: 10px;
+}
+
+.sub_menu4 ul li img[src="Incantation_Icons/Two Fingers.png"]
+{
+    height: 20px;
+    width: 30px;
+    padding-right: 10px;
+}
+
+.sub_menu4 ul li img[src="Incantation_Icons/Three Fingers.png"]
+{
+    height: 20px;
+    width: 30px;
+    padding-right: 10px;
+}
+
+.sub_menu4 ul li img[src="Incantation_Icons/Godskin.png"]
+{
+    height: 20px;
+    width: 30px;
+    padding-right: 10px;
+}
+
+.sub_menu4 ul li img[src="Incantation_Icons/Blood.png"]
+{
+    height: 20px;
+    width: 30px;
+    padding-right: 10px;
+}
+
+.sub_menu4 ul li img[src="Incantation_Icons/Dragon.png"]
+{
+    height: 20px;
+    width: 30px;
+    padding-right: 10px;
+}
+
+.sub_menu4 ul li img[src="Incantation_Icons/Dragon_Cult.png"]
+{
+    height: 20px;
+    width: 30px;
+    padding-right: 10px;
+}
+
+.sub_menu4 ul li img[src="Incantation_Icons/Bestial.png"]
+{
+    height: 20px;
+    width: 30px;
+    padding-right: 10px;
+}
+
+.sub_menu4 ul li img[src="Incantation_Icons/Golden Order.png"]
+{
+    height: 20px;
+    width: 30px;
+    padding-right: 10px;
+}
+
+.logo1
+{
+    display: flex;
+    margin-top: 11px;
+    margin-left: 50px;
+}
+
+.container
+{
+    size: 100%;
+    width: 100px;
+    padding-top: 10px;
+    padding-left: 17px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card{
+    width: 1500px;
+    position: relative;
+    size: 100%;
+}
+
+.box{
+    width: 1480px;
+    height: 8650px;
+    background: black;
+    opacity: .8;
+    align-items: center;
+    border-top: 2px solid goldenrod;
+    border-bottom: 2px solid goldenrod;
+    size: 100%;
+}
+
+.content
+{
+    position: absolute;
+    width: 90%;
+    top: 30px;
+    left: 20px;
+    color: white;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.ERW
+{
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-weight: 200;
+}
+
+.ERW:hover
+{   
+    border: non;
+    color: rgb(153, 125, 53);
+}
+
+.gold
+{
+    margin-left: 10px;
+    width: 120px;
+    border: none;
+    height: 2.5px;
+    background-color: rgb(160, 139, 87);
+    display: inline-flex;
+}
+
+.white
+{
+    margin-left: 0px;
+    width: 1200px;
+    border: none;
+    height: 2px;
+    background-color: white;
+    display: inline-flex;
+}
+
+.logo2
+{
+    margin-left: 590px;
+}
+
+.margins p
+{
+    text-align: center;
+    padding-left: 60px;
+    padding-top: 20px;
+    font-size: 28px;
+    font-weight: lighter;
+}
+
+.OW
+{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+    font-weight: lighter;
+    margin-top: 50px;
+    margin-left: 200px;
+    margin-right: auto;
+    color: rgb(155, 120, 30);
+    opacity: 1;
+    filter: brightness(150%);
+    text-decoration: underline;
+    display: inline-block;
+}
+
+.UG
+{   
+    font-family: 'Times New Roman', Times, serif;
+    text-align: right;
+    font-weight: lighter;
+    margin-top: 50px;
+    margin-left: 460px;
+    margin-right: auto;
+    color: rgb(155, 120, 30);
+    opacity: 1;
+    filter: brightness(150%);
+    text-decoration: underline;
+    display: inline-block;
+}
+
+img[src="map.jpg"]
+{
+    opacity: 9999;
+    z-index: 9999;
+    margin-left: 5px;
+    filter: brightness(130%);
+    width: 50%;
+    margin-top: 30px;
+    display: inline-block;
+}
+
+img[src="UG MAP.png"]
+{
+    display: inline-block;
+    width: 40%;
+    margin-left: 100px;
+    filter: brightness(130%);
+    margin-bottom: 180px;
+    margin-top: 30px;
+}
+
+.review span
+{
+    font-size: 28px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 10px;
+    margin-top: 30px;
+    font-weight: 200;
+    display: inline-block;
+}
+
+
+.gold1
+{
+    margin-left: 10px;
+    margin-top: 5px;
+    width: 120px;
+    border: none;
+    height: 2.5px;
+    background-color: rgb(160, 139, 87);
+    display: inline-block;
+}
+
+.white1
+{
+    margin-left: 0px;
+    width: 1200px;
+    border: none;
+    height: 2.5px;
+    background-color: white;
+    display: inline-block;
+}
+
+.margins1 p
+{
+    margin-left: 9px;
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+.gold2
+{
+    margin-left: 10px;
+    margin-top: 5px;
+    width: 120px;
+    border: none;
+    height: 2.5px;
+    background-color: rgb(160, 139, 87);
+    display: inline-block;
+}
+
+.white2
+{
+    margin-left: 0px;
+    width: 1200px;
+    border: none;
+    height: 2.5px;
+    background-color: white;
+    display: inline-block;
+}
+
+.guide span
+{
+    font-size: 28px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 10px;
+    margin-top: 30px;
+    font-weight: 200;
+    display: inline-block;
+}
+
+.guide p
+{
+    margin-left: 9px;
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+.margins2 img
+{
+    width: 105%;
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 10px;
+    filter: brightness(130%);
+}
+
+.sysreq-header
+{
+    display: none;
+}
+
+.minh
+{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+    font-weight: lighter;
+    margin-top: 50px;
+    margin-left: 180px;
+    margin-right: auto;
+    color: rgb(155, 120, 30);
+    opacity: 1;
+    filter: brightness(150%);
+    text-decoration: underline;
+    display: inline-block;
+}
+
+.recommendedh
+{   
+    font-family: 'Times New Roman', Times, serif;
+    text-align: right;
+    font-weight: lighter;
+    margin-top: 50px;
+    margin-left: 240px;
+    margin-right: auto;
+    color: rgb(155, 120, 30);
+    opacity: 1;
+    filter: brightness(150%);
+    text-decoration: underline;
+    display: inline-block;
+}
+
+.min
+{
+    width: 500px;
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 130px;
+}
+
+.min li
+{
+    font-size: 24px;
+}
+
+.rec
+{
+    width: 500px;
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 180px;
+}
+
+.rec li
+{
+    font-size: 24px;
+}
+
+.rec1
+{
+    width: 500px;
+    display: none;
+    margin-top: 20px;
+    margin-left: 180px;
+}
+
+.rec1 li
+{
+    font-size: 24px;
+}
+
+.recommendedh1
+{   
+    font-family: 'Times New Roman', Times, serif;
+    text-align: right;
+    font-weight: lighter;
+    margin-top: 50px;
+    margin-left: 200px;
+    margin-right: auto;
+    color: rgb(155, 120, 30);
+    opacity: 1;
+    filter: brightness(150%);
+    text-decoration: underline;
+    display: none;
+}
+
+.gold7
+{
+    margin-left: 10px;
+    margin-top: 5px;
+    width: 120px;
+    border: none;
+    height: 2.5px;
+    background-color: rgb(160, 139, 87);
+    display: none;
+}
+
+.white7
+{
+    margin-left: 0px;
+    width: 1200px;
+    border: none;
+    height: 2.5px;
+    background-color: white;
+    display: none;
+}
+
+/* Table Vagabond */
+
+.vagabond-table
+{
+    color: white;
+    margin-top: 80px;
+    margin-left: 120px;
+    border: 5px double rgb(160, 139, 87);
+    width: 320px;
+    float: left;
+}
+
+.vagabond-table th
+{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.V-attributes tr td
+{
+    text-align: justify;
+    padding-top: 0px   ;
+    padding-left: 40px;
+    padding-bottom: 13px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.V-attributes a
+{
+    text-decoration: none;
+    color: white;
+}
+
+.V-attributes a:hover
+{
+    text-decoration: none;
+    color: rgb(153, 125, 53);;
+}
+
+img[src="Class Icons/Vagabond.png"]
+{
+    margin-left: 20px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    filter: brightness(130%);
+}
+
+.image-V td
+{
+    border-top: 1px solid rgb(187, 174, 174);
+}
+
+.image-V:hover
+{
+    background-color: rgb(175, 165, 165);
+    opacity: 0.7;
+}
+
+/* Table for Warrior */
+
+.warrior-table
+{
+    color: white;
+    margin-top: 80px;
+    margin-left: 120px;
+    border: 5px double rgb(160, 139, 87);
+    width: 320px;
+    float: left;
+}
+
+.warrior-table th
+{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.W-attributes tr td
+{
+    text-align: justify;
+    padding-top: 0px   ;
+    padding-left: 40px;
+    padding-bottom: 13px;
+    font-size: 20px;
+}
+
+.W-attributes a
+{
+    text-decoration: none;
+    color: white;
+}
+
+.W-attributes a:hover
+{
+    text-decoration: none;
+    color: rgb(153, 125, 53);;
+}
+
+img[src="Class Icons/Warrior.png"]
+{
+    margin-left: 20px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    filter: brightness(130%);
+}
+
+.image-W:hover
+{
+    background-color: rgb(175, 165, 165);
+    opacity: 0.7;
+}
+
+.image-W td
+{
+    border-top: 1px solid rgb(187, 174, 174);
+}
+
+/* Table for Hero */
+
+.hero-table
+{
+    color: white;
+    margin-top: 80px;
+    margin-left: 120px;
+    border: 5px double rgb(160, 139, 87);
+    width: 320px;
+    float: left;
+}
+
+.hero-table th
+{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.H-attributes tr td
+{
+    text-align: justify;
+    padding-top: 0px   ;
+    padding-left: 40px;
+    padding-bottom: 13px;
+    font-size: 20px;
+}
+
+.H-attributes a
+{
+    text-decoration: none;
+    color: white;
+}
+
+.H-attributes a:hover
+{
+    text-decoration: none;
+    color: rgb(153, 125, 53);;
+}
+
+img[src="Class Icons/Hero.png"]
+{
+    margin-left: 20px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    filter: brightness(130%);
+}
+
+.image-H:hover
+{
+    background-color: rgb(175, 165, 165);
+    opacity: 0.7;
+}
+
+.image-H td
+{
+    border-top: 1px solid rgb(187, 174, 174);
+}
+
+/* Table for Samurai */
+
+.samurai-table
+{
+    color: white;
+    margin-top: 80px;
+    margin-left: 120px;
+    border: 5px double rgb(160, 139, 87);
+    width: 320px;
+    float: left;
+}
+
+.samurai-table th
+{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.S-attributes tr td
+{
+    text-align: justify;
+    padding-top: 0px   ;
+    padding-left: 40px;
+    padding-bottom: 13px;
+    font-size: 20px;
+}
+
+.S-attributes a
+{
+    text-decoration: none;
+    color: white;
+}
+
+.S-attributes a:hover
+{
+    text-decoration: none;
+    color: rgb(153, 125, 53);;
+}
+
+img[src="Class Icons/Samurai.png"]
+{
+    margin-left: 20px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    filter: brightness(130%);
+}
+
+.image-S:hover
+{
+    background-color: rgb(175, 165, 165);
+    opacity: 0.7;
+}
+
+.image-S td
+{
+    border-top: 1px solid rgb(187, 174, 174);
+}
+
+/* Table for Bandit */
+
+.bandit-table
+{
+    color: white;
+    margin-top: 80px;
+    margin-left: 120px;
+    border: 5px double rgb(160, 139, 87);
+    width: 320px;
+    float: left;
+}
+
+.bandit-table th
+{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.B-attributes tr td
+{
+    text-align: justify;
+    padding-top: 0px   ;
+    padding-left: 40px;
+    padding-bottom: 13px;
+    font-size: 20px;
+}
+
+.B-attributes a
+{
+    text-decoration: none;
+    color: white;
+}
+
+.B-attributes a:hover
+{
+    text-decoration: none;
+    color: rgb(153, 125, 53);;
+}
+
+img[src="Class Icons/Bandit.png"]
+{
+    margin-left: 20px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    filter: brightness(130%);
+}
+
+.image-B:hover
+{
+    background-color: rgb(175, 165, 165);
+    opacity: 0.7;
+}
+
+.image-B td
+{
+    border-top: 1px solid rgb(187, 174, 174);
+}
+
+/* Table for Confessor */
+
+.confessor-table
+{
+    color: white;
+    margin-top: 80px;
+    margin-left: 120px;
+    border: 5px double rgb(160, 139, 87);
+    width: 320px;
+    float: left;
+}
+
+.confessor-table th
+{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.C-attributes tr td
+{
+    text-align: justify;
+    padding-top: 0px   ;
+    padding-left: 40px;
+    padding-bottom: 13px;
+    font-size: 20px;
+}
+
+.C-attributes a
+{
+    text-decoration: none;
+    color: white;
+}
+
+.C-attributes a:hover
+{
+    text-decoration: none;
+    color: rgb(153, 125, 53);;
+}
+
+img[src="Class Icons/Confessor.png"]
+{
+    margin-left: 20px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    filter: brightness(130%);
+}
+
+.image-C:hover
+{
+    background-color: rgb(175, 165, 165);
+    opacity: 0.7;
+}
+
+.image-C td
+{
+    border-top: 1px solid rgb(187, 174, 174);
+}
+
+/* Table for Prisoner */
+
+.prisoner-table
+{
+    color: white;
+    margin-top: 80px;
+    margin-left: 120px;
+    border: 5px double rgb(160, 139, 87);
+    width: 320px;
+    float: left;
+}
+
+.prisoner-table th
+{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.PRIS-attributes tr td
+{
+    text-align: justify;
+    padding-top: 0px   ;
+    padding-left: 40px;
+    padding-bottom: 13px;
+    font-size: 20px;
+}
+
+.PRIS-attributes a
+{
+    text-decoration: none;
+    color: white;
+}
+
+.PRIS-attributes a:hover
+{
+    text-decoration: none;
+    color: rgb(153, 125, 53);;
+}
+
+img[src="Class Icons/Prisoner.png"]
+{
+    margin-left: 20px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    filter: brightness(130%);
+}
+
+.image-PRIS:hover
+{
+    background-color: rgb(175, 165, 165);
+    opacity: 0.7;
+}
+
+.image-PRIS td
+{
+    border-top: 1px solid rgb(187, 174, 174);
+}
+
+/* Table for Astrologer */
+
+.astrologer-table
+{
+    color: white;
+    margin-top: 80px;
+    margin-left: 120px;
+    border: 5px double rgb(160, 139, 87);
+    width: 320px;
+    float: left;
+}
+
+.astrologer-table th
+{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.A-attributes tr td
+{
+    text-align: justify;
+    padding-top: 0px   ;
+    padding-left: 40px;
+    padding-bottom: 13px;
+    font-size: 20px;
+}
+
+.A-attributes a
+{
+    text-decoration: none;
+    color: white;
+}
+
+.A-attributes a:hover
+{
+    text-decoration: none;
+    color: rgb(153, 125, 53);;
+}
+
+img[src="Class Icons/Astrologer.png"]
+{
+    margin-left: 20px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    filter: brightness(130%);
+}
+
+.image-A:hover
+{
+    background-color: rgb(175, 165, 165);
+    opacity: 0.7;
+}
+
+.image-A td
+{
+    border-top: 1px solid rgb(187, 174, 174);
+}
+
+/* Table for Prophet */
+
+.prophet-table
+{
+    color: white;
+    margin-top: 80px;
+    margin-left: 120px;
+    border: 5px double rgb(160, 139, 87);
+    width: 320px;
+    float: left;
+}
+
+.prophet-table th
+{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.PROP-attributes tr td
+{
+    text-align: justify;
+    padding-top: 0px   ;
+    padding-left: 40px;
+    padding-bottom: 13px;
+    font-size: 20px;
+}
+
+.PROP-attributes a
+{
+    text-decoration: none;
+    color: white;
+}
+
+.PROP-attributes a:hover
+{
+    text-decoration: none;
+    color: rgb(153, 125, 53);;
+}
+
+img[src="Class Icons/Prophet.png"]
+{
+    margin-left: 20px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    filter: brightness(130%);
+}
+
+.image-PROP:hover
+{
+    background-color: rgb(175, 165, 165);
+    opacity: 0.7;
+}
+
+.image-PROP td
+{
+    border-top: 1px solid rgb(187, 174, 174);
+}
+
+/* Table for Wretch */
+
+.wretch-table
+{
+    color: white;
+    margin-top: 80px;
+    margin-left: 560px;
+    border: 5px double rgb(160, 139, 87);
+    width: 320px;
+    float: left;
+}
+
+.wretch-table th
+{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.WH-attributes tr td
+{
+    text-align: justify;
+    padding-top: 0px   ;
+    padding-left: 40px;
+    padding-bottom: 13px;
+    font-size: 20px;
+}
+
+.WH-attributes a
+{
+    text-decoration: none;
+    color: white;
+}
+
+.WH-attributes a:hover
+{
+    text-decoration: none;
+    color: rgb(153, 125, 53);
+}
+
+img[src="Class Icons/Wretch.png"]
+{
+    margin-left: 20px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    filter: brightness(130%);
+}
+
+.image-WH:hover
+{
+    background-color: rgb(175, 165, 165);
+    opacity: 0.7;
+}
+
+.image-WH td
+{
+    border-top: 1px solid rgb(187, 174, 174);
+}
+
+.story span
+{
+    display: inline-block;
+    text-align: center;
+    margin-top: 5px;
+    margin-right: 60px;
+    margin-left: 163px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    font-size: 24px;
+}
+
+.gold3
+{
+    margin-left: 20px;
+    margin-top: 5px;
+    width: 1400px;
+    border: none;
+    height: 2px;
+    background-color: rgb(160, 139, 87);
+    display: inline-block;
+    height: 2.5px;
+}
+
+.gold4
+{
+    margin-left: 20px;
+    margin-top: 50px;
+    width: 1400px;
+    border: none;
+    height: 2px;
+    background-color: rgb(160, 139, 87);
+    display: inline-block;
+    height: 2.5px;
+}
+
+img[src="Story_Images/storyimg-1.png"]
+{
+    float: left;
+    margin-top: 30px;
+    margin-left: 160px;
+    filter: brightness(130%);
+}
+
+img[src="Story_Images/storyimg-2.png"]
+{
+    float: right;
+    margin-top: 30px;
+    filter: brightness(130%);
+    padding-right: 80px;
+}
+
+.ERSO
+{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.TLB
+{
+    display: inline-block;
+    margin-left: 220px;
+    font-size: 26px;
+    margin-top: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+}
+
+.TD
+{
+    display: inline-block;
+    margin-left: 500px;
+    font-size: 26px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.TD-1
+{
+    display: none;
+}
+
+.SI-1
+{
+    display: none;
+}
+
+.SP2-1
+{
+    display: none;
+}
+
+.SP5-1
+{
+    display: none;
+}
+
+.SP1
+{
+    float: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    width: 40%;
+    margin-top: 20px;
+    margin-left: 90px;
+}
+
+.SP2
+{
+    float: right;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    width: 40%;
+    margin-top: 20px;
+    margin-left: 180px;
+}
+
+.SP3
+{
+    float: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    width: 40%;
+    margin-top: 20px;
+    margin-left: 90px;
+}
+
+.SP4
+{
+    float: right;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    width: 40%;
+    margin-top: 20px;
+    margin-left: 180px;
+}
+
+.SP5
+{
+    float: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    width: 40%;
+    margin-top: 20px;
+    margin-left: 90px;
+}
+
+.combat span
+{
+    display: inline-block;
+    text-align: center;
+    margin-top: 5px;
+    margin-right: 60px;
+    margin-left: 590px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    font-size: 24px;
+}
+
+.gold6
+{
+    margin-left: 20px;
+    margin-top: 5px;
+    width: 1400px;
+    border: none;
+    height: 2px;
+    background-color: rgb(160, 139, 87);
+    display: inline-block;
+    height: 2.5px;
+}
+
+.gold5
+{
+    margin-left: 20px;
+    margin-top: 50px;
+    width: 1400px;
+    border: none;
+    height: 2px;
+    background-color: rgb(160, 139, 87);
+    display: inline-block;
+    height: 2.5px;
+}
+
+.stealth
+{
+    display: inline-block;
+    margin-left: 280px;
+    font-size: 26px;
+    margin-top: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+}
+
+.NM
+{
+    display: inline-block;
+    margin-left: 560px;
+    font-size: 26px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+img[src="Combat_Images/stealth.png"]
+{
+    float: left;
+    margin-top: 30px;
+    margin-left: 140px;
+    filter: brightness(130%);
+}
+
+img[src="Combat_Images/NM.png"]
+{
+    float: right;
+    margin-top: 30px;
+    filter: brightness(130%);
+    padding-right: 70px;
+}
+
+.CP1
+{
+    float: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    width: 40%;
+    margin-top: 20px;
+    margin-left: 90px;
+}
+
+.CP2
+{
+    float: right;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    width: 40%;
+    margin-top: 20px;
+    margin-left: 180px;
+}
+
+.build
+{
+    display: inline-block;
+    margin-left: 145px;
+    font-size: 26px;
+    margin-top: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+}
+
+.summoning
+{
+    display: inline-block;
+    margin-left: 910px;
+    font-size: 26px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+img[src="Combat_Images/build.png"]
+{
+    float: left;
+    margin-top: 1px;
+    margin-left: 140px;
+    filter: brightness(130%);
+}
+
+img[src="Combat_Images/summoning.png"]
+{
+    float: right;
+    margin-top: 30px;
+    filter: brightness(130%);
+    padding-right: 70px;
+}
+
+.CP3
+{
+    float: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    width: 40%;
+    margin-top: 20px;
+    margin-left: 90px;
+}
+
+.CP3-2
+{
+    float: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    width: 40%;
+    margin-top: 20px;
+    margin-left: 90px;
+}
+
+.CP4
+{
+    float: right;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    width: 40%;
+    margin-top: 20px;
+    margin-left: 180px;
+}
+
+.CP4-2
+{
+    float: right;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    width: 40%;
+    margin-top: 20px;
+    margin-left: 180px;
+}
+
+.DNCycle
+{
+    display: inline-block;
+    margin-left: 210px;
+    font-size: 26px;
+    margin-top: 80px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+}
+
+.difficulty
+{
+    display: inline-block;
+    margin-left: 950px;
+    margin-top: 30px;
+    font-size: 26px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+img[src="Combat_Images/DN.png"]
+{
+    float: left;
+    margin-top: 0px;
+    margin-left: 130px;
+    filter: brightness(130%);
+}
+
+img[src="Combat_Images/difficulty.png"]
+{
+    float: right;
+    margin-top: 30px;
+    filter: brightness(170%);
+    padding-right: 70px;
+}
+
+.CP5
+{
+    float: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    width: 40%;
+    margin-top: 20px;
+    margin-left: 90px;
+}
+
+.CP6
+{
+    float: right;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    width: 40%;
+    margin-top: 20px;
+    margin-left: 180px;
+}
+
+.text-center
+{
+    float: left;
+    white-space: nowrap;
+    margin-left: 560px;
+    color: white;
+    margin-top: 15px;
+}
+
+.text-center span a
+{
+    text-decoration: none;
+    color: rgb(160, 139, 87);
+}
+.text-center span a:hover
+{
+    text-decoration: underline;
+}
+
+.footer-links
+{   
+    display: inline-block;
+    margin-left: 360px;
+    padding-bottom: 20px;
+}
+
+.footer-links li
+{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    padding-left: 10px;
+    white-space: nowrap ;
+}
+
+.footer-links li a
+{
+    text-decoration: none;
+    color: rgb(160, 139, 87);
+}
+
+.footer-links li a:hover
+{
+    text-decoration: underline;
+}
+
+.NM-1
+{
+    display: none;
+}
+
+img[src="Combat_Images/NM-1.png"]
+{
+    display: none;
+}
+
+.CP2-1{
+    display: none;
+}
+
+.summoning-1
+{
+    display: none;
+}
+
+img[src="Combat_Images/summoning-1.png"]
+{
+    display: none;
+}
+
+.CP4-1
+{
+    display: none;
+}
+
+.CP4-3
+{
+    display: none;
+}
+
+.difficulty-1
+{
+    display: none;
+}
+
+img[src="Combat_Images/difficulty-1.png"]
+{
+    display: none;
+}
+
+.CP6-1
+{
+    display: none;
+}
+
+.burger {
+    position: absolute;
+    cursor: pointer;
+    right: 90%;
+    top: 28px;
+    display: none;
+}
+
+.line 
+{
+    width: 62px;
+    background-color: white;
+    height: 8px;
+    margin: 9px -30px;
+}
+
+@media only screen and (max-width: 416px) {
+    .logo1
+    {
+    display: none;
+    }
+
+    .ERW
+    {
+        font-size: 70px;
+    }
+
+    .gold
+    {
+        height: 10px;
+        width: 150px;
+    }
+
+    .white
+    {
+        height: 10px;
+        width: 1150px;
+    }
+
+    .logo2
+    {
+        width: 700px;
+        margin-left: 360px;
+    }
+
+    .margins p
+    {
+        padding-top: 30px;
+        font-size: 70px;
+        line-height: 140%;
+    }
+
+    .OW
+    {
+        display: none;
+    }
+
+    .UG
+    {   
+        display: none;
+    }
+
+    img[src="map.jpg"]
+    {
+        display: none;
+    }
+
+    img[src="UG MAP.png"]
+    {
+        display: none;
+    }
+
+    .review span
+    {
+        font-size: 70px;
+    }
+
+    .gold1
+    {
+        height: 10px;
+        width: 150px;
+    }
+
+    .white1
+    {
+        height: 10px;
+        width: 1150px;
+    }
+
+    .margins1 p
+    {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: lighter;
+        color: white;
+        text-align: justify;
+        font-size: 55px;
+    }
+
+    .sysreq-header
+    {
+        display: inline-block;
+        font-family: 'Times New Roman', Times, serif;
+        margin-top: 30px;
+        padding-left: 10px;
+        font-size: 70px;
+        color: white;
+    }
+
+    .recommendedh
+    {   
+        display: none;
+    }
+
+    .rec
+    {
+        width: 500px;
+        display: none;
+        margin-top: 20px;
+        margin-left: 180px;
+    }
+
+    .recommendedh1
+    {
+        font-size: 60px;
+        text-align: center;
+        margin-left: 10px;
+        color: white;
+        display: flex;
+    }
+
+    .rec1
+    {
+        width: 1000px;
+        display: inline-block;
+        margin-top: 20px;
+        margin-left: 130px;
+    }
+
+    .rec1 li
+    {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: lighter;
+        font-size: 50px;
+    }
+
+    .minh
+    {   
+        font-size: 60px;
+        text-align: center;
+        margin-left: 10px;
+        color: white;
+        display: flex;
+    }
+
+    .min
+    {
+        width: 1000px;
+        display: inline-block;
+        margin-top: 20px;
+        margin-left: 130px;
+    }
+
+    .min li
+    {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: lighter;
+        font-size: 50px;
+    }
+
+    .gold7
+    {
+        margin-left: 10px;
+        margin-top: 5px;
+        height: 10px;
+        width: 150px;
+        border: none;
+        background-color: rgb(160, 139, 87);
+        display: inline-block;
+    }
+
+    .white7
+    {
+        margin-left: 0px;
+        height: 10px;
+        width: 1150px;
+        border: none;
+        background-color: white;
+        display: inline-block;
+    }
+
+    .guide span
+    {
+        font-size: 70px;
+    }
+
+    .gold2
+    {
+        height: 10px;
+        width: 150px;
+    }
+
+    .white2
+    {
+        height: 10px;
+        width: 1150px;
+    }
+
+    .guide p
+    {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: lighter;
+        text-align: justify;
+        font-size: 50px;
+    }
+
+    .box{
+        width: 1480px;
+        height: 25249px;
+        background: black;
+        opacity: 1;
+        border-top: 2px solid goldenrod;
+        border-bottom: 2px solid goldenrod;
+        size: 100%;
+    }
+
+    img[src="Class Icons/Vagabond.png"] {
+        margin-left: 20px;
+        width: 500;
+        height: 700;
+        margin-top: 10px;
+        padding-bottom: 10px;
+        filter: brightness(130%);
+    }
+
+    .V-attributes tr td {
+        text-align: justify;
+        padding-top: 0;
+        padding-left: 40px;
+        padding-bottom: 13px;
+        font-size: 45;
+        margin-top: 20px;
+    }
+
+    .vagabond-table th
+    {
+        font-size: 60px;
+    }
+
+    img[src="Class Icons/Warrior.png"] {
+        margin-left: 20px;
+        width: 500;
+        height: 700;
+        margin-top: 10px;
+        padding-bottom: 10px;
+        filter: brightness(130%);
+    }
+
+    .W-attributes tr td {
+        text-align: justify;
+        padding-top: 0;
+        padding-left: 40px;
+        padding-bottom: 13px;
+        font-size: 45;
+        margin-top: 20px;
+    }
+
+    .warrior-table th
+    {
+        font-size: 60px;
+    }
+
+    img[src="Class Icons/Hero.png"] {
+        margin-left: 20px;
+        width: 500;
+        height: 700;
+        margin-top: 10px;
+        padding-bottom: 10px;
+        filter: brightness(130%);
+    }
+
+    .H-attributes tr td {
+        text-align: justify;
+        padding-top: 0;
+        padding-left: 40px;
+        padding-bottom: 13px;
+        font-size: 45;
+        margin-top: 20px;
+    }
+
+    .hero-table th
+    {
+        font-size: 60px;
+    }
+
+    img[src="Class Icons/Samurai.png"] {
+        margin-left: 20px;
+        width: 500;
+        height: 700;
+        margin-top: 10px;
+        padding-bottom: 10px;
+        filter: brightness(130%);
+    }
+
+    .S-attributes tr td {
+        text-align: justify;
+        padding-top: 0;
+        padding-left: 40px;
+        padding-bottom: 13px;
+        font-size: 45;
+        margin-top: 20px;
+    }
+
+    .samurai-table th
+    {
+        font-size: 60px;
+    }
+
+    img[src="Class Icons/Bandit.png"] {
+        margin-left: 20px;
+        width: 500;
+        height: 700;
+        margin-top: 10px;
+        padding-bottom: 10px;
+        filter: brightness(130%);
+    }
+
+    .B-attributes tr td {
+        text-align: justify;
+        padding-top: 0;
+        padding-left: 40px;
+        padding-bottom: 13px;
+        font-size: 45;
+        margin-top: 20px;
+    }
+
+    .bandit-table th
+    {
+        font-size: 60px;
+    }
+
+    img[src="Class Icons/Confessor.png"] {
+        margin-left: 20px;
+        width: 500;
+        height: 700;
+        margin-top: 10px;
+        padding-bottom: 10px;
+        filter: brightness(130%);
+    }
+
+    .C-attributes tr td {
+        text-align: justify;
+        padding-top: 0;
+        padding-left: 40px;
+        padding-bottom: 13px;
+        font-size: 45;
+        margin-top: 20px;
+    }
+
+    .confessor-table th
+    {
+        font-size: 60px;
+    }
+
+    img[src="Class Icons/Prisoner.png"] {
+        margin-left: 20px;
+        width: 500;
+        height: 700;
+        margin-top: 10px;
+        padding-bottom: 10px;
+        filter: brightness(130%);
+    }
+
+    .PRIS-attributes tr td {
+        text-align: justify;
+        padding-top: 0;
+        padding-left: 40px;
+        padding-bottom: 13px;
+        font-size: 45;
+        margin-top: 20px;
+    }
+
+    .prisoner-table th
+    {
+        font-size: 60px;
+    }
+
+    img[src="Class Icons/Astrologer.png"] {
+        margin-left: 20px;
+        width: 500;
+        height: 700;
+        margin-top: 10px;
+        padding-bottom: 10px;
+        filter: brightness(130%);
+    }
+
+    .A-attributes tr td {
+        text-align: justify;
+        padding-top: 0;
+        padding-left: 40px;
+        padding-bottom: 13px;
+        font-size: 45;
+        margin-top: 20px;
+    }
+
+    .astrologer-table th
+    {
+        font-size: 60px;
+    }
+
+    img[src="Class Icons/Prophet.png"] {
+        margin-left: 20px;
+        width: 500;
+        height: 700;
+        margin-top: 10px;
+        padding-bottom: 10px;
+        filter: brightness(130%);
+    }
+
+    .PROP-attributes tr td {
+        text-align: justify;
+        padding-top: 0;
+        padding-left: 40px;
+        padding-bottom: 13px;
+        font-size: 45;
+        margin-top: 20px;
+    }
+
+    .prophet-table th
+    {
+        font-size: 60px;
+    }
+
+    img[src="Class Icons/Wretch.png"] {
+        margin-left: 20px;
+        width: 500;
+        height: 700;
+        margin-top: 10px;
+        padding-bottom: 10px;
+        filter: brightness(130%);
+    }
+
+    .wretch-table {
+        color: white;
+        margin-top: 80px;
+        margin-left: 120px;
+        border: 5px double rgb(160, 139, 87);
+        width: 320px;
+        float: left;
+    }
+
+    .WH-attributes tr td {
+        text-align: justify;
+        padding-top: 0;
+        padding-left: 40px;
+        padding-bottom: 13px;
+        font-size: 45px;
+        margin-top: 20px;
+    }
+
+    .wretch-table th
+    {
+        font-size: 60px;
+    }
+
+    .gold4
+    {
+        height: 10px;
+    }
+
+    .story span
+    {
+        margin-left: 100px;
+        font-size: 60px;
+    }
+
+    .gold3
+    {
+        height: 10px;
+    }
+
+    .TD
+    {
+        display: none;
+    }
+
+    img[src="Story_Images/storyimg-2.png"]
+    {
+        display: none;
+    }
+
+    .SP2
+    {
+        display: none;
+    }
+    
+    .SP4
+    {
+        display: none;
+    }
+
+    .TLB
+    {
+        font-size: 50px;
+        margin-left: 450px;
+    }
+
+    img[src="Story_Images/storyimg-1.png"] 
+    {
+        display: inline-block;
+        width: 1200;
+        height: 600;
+        margin-top: 30px;
+        margin-left: 120;
+        filter: brightness(130%);
+    }
+
+    .SP1 {
+        display: inline-block;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 45;
+        font-weight: lighter;
+        width: 90%;
+        text-align: justify;
+        margin-top: 30;
+        margin-left: 120;
+    }
+
+    .SP3 {
+        display: inline-block;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 45;
+        font-weight: lighter;
+        width: 90%;
+        text-align: justify;
+        margin-top: 30;
+        margin-left: 120;
+    }
+
+    .SP5 {
+        display: inline-block;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 45;
+        font-weight: lighter;
+        width: 90%;
+        text-align: justify;
+        margin-top: 30;
+        margin-left: 120;
+    }
+
+    .TD-1
+    {
+        display: inline-block;
+        font-size: 50px;
+        margin-left: 540px;
+        margin-top: 50px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: lighter;
+    }
+
+    .SI-1
+    {
+        display: inline-block;
+        width: 1200;
+        height: 600;
+        margin-top: 40px;
+        margin-left: 120;
+        filter: brightness(130%);
+    }
+
+    .SP2-1
+    {
+        display: inline-block;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 45;
+        font-weight: lighter;
+        width: 90%;
+        text-align: justify;
+        margin-top: 40;
+        margin-left: 120;
+    }
+
+    .SP5-1
+    {
+        display: inline-block;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 45;
+        font-weight: lighter;
+        width: 90%;
+        text-align: justify;
+        margin-top: 30;
+        margin-left: 120;
+    }
+
+    .gold5
+    {
+        height: 10px;
+    }
+
+    .combat span
+    {
+        margin-left: 360px;
+        font-size: 60px;
+    }
+
+    .gold6
+    {
+        height: 10px;
+    }
+
+    .NM
+    {
+        display: none;
+    }
+
+    img[src="Combat_Images/NM.png"] 
+    {
+        display: none;
+    }
+
+    .CP3-2
+    {
+        display: none;
+    }
+
+    .CP2
+    {
+        display: none;
+    }
+
+    .CP1 {
+        display: inline-block;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 45;
+        font-weight: lighter;
+        width: 90%;
+        text-align: justify;
+        margin-top: 30px;
+        margin-left: 120;
+    }
+
+    img[src="Combat_Images/stealth.png"]
+    {
+        width: 1200;
+        height: 600;
+        margin-left: 110px;
+    }
+
+    .stealth
+    {
+        display: inline-block;
+        margin-left: 600px;
+        font-size: 50px;
+    }
+
+    .NM-1
+    {
+        display: inline-block;
+        margin-left: 530px;
+        font-size: 50px;
+        margin-top: 50px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: lighter;
+    }
+
+    img[src="Combat_Images/NM-1.png"]
+    {
+        display: inline-block;
+        width: 1200;
+        height: 600;
+        margin-left: 110px;
+        margin-top: 30px;
+    }
+
+    .CP2-1{
+        display: inline-block;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 45;
+        font-weight: lighter;
+        width: 90%;
+        text-align: justify;
+        margin-top: 30px;
+        margin-left: 120;
+    }
+
+    .build
+    {
+        display: inline-block;
+        margin-left: 350px;
+        font-size: 50px;
+        margin-top: 50px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: lighter;
+    }
+
+    img[src="Combat_Images/build.png"]
+    {
+        display: inline-block;
+        width: 1200;
+        height: 600;
+        margin-left: 110px;
+        margin-top: 30px;
+    }
+
+    .CP3
+    {
+        display: inline-block;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 45;
+        font-weight: lighter;
+        width: 90%;
+        text-align: justify;
+        margin-top: 30px;
+        margin-left: 120;
+    }
+
+    .CP3-2
+    {
+        display: inline-block;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 45;
+        font-weight: lighter;
+        width: 90%;
+        text-align: justify;
+        margin-top: 30px;
+        margin-left: 120;
+    }
+
+    .summoning
+    {
+        display: none;
+    }
+
+    img[src="Combat_Images/summoning.png"]
+    {
+        display: none;
+    }
+
+    .CP4
+    {
+        display: none;
+    }
+
+    .CP4-2
+    {
+        display: none;
+    }
+
+    .summoning-1
+    {
+        display: inline-block;
+        margin-left: 440px;
+        font-size: 50px;
+        margin-top: 50px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: lighter;
+    }
+
+    img[src="Combat_Images/summoning-1.png"]
+    {
+        display: inline-block;
+        width: 1200;
+        height: 600;
+        margin-left: 110px;
+        margin-top: 30px;
+    }
+
+    .CP4-1
+    {
+        display: inline-block;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 45;
+        font-weight: lighter;
+        width: 90%;
+        text-align: justify;
+        margin-top: 30px;
+        margin-left: 120;
+    }
+
+    .CP4-3
+    {
+        display: inline-block;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 45;
+        font-weight: lighter;
+        width: 90%;
+        text-align: justify;
+        margin-top: 30px;
+        margin-left: 120;
+    }
+
+    .DNCycle
+    {
+        display: inline-block;
+        margin-left: 470px;
+        font-size: 50px;
+        margin-top: 50px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: lighter;
+    }
+
+    img[src="Combat_Images/DN.png"]
+    {
+        display: inline-block;
+        width: 1200;
+        height: 600;
+        margin-left: 110px;
+        margin-top: 30px;
+    }
+
+    .CP5
+    {
+        display: inline-block;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 45;
+        font-weight: lighter;
+        width: 90%;
+        text-align: justify;
+        margin-top: 50px;
+        margin-left: 120;
+    }
+
+    .difficulty
+    {
+        display: none;
+    }
+
+    img[src="Combat_Images/difficulty.png"]
+    {
+        display: none;
+    }
+
+    .CP6
+    {
+        display: none;
+    }
+
+    .difficulty-1
+    {
+        display: inline-block;
+        margin-left: 510px;
+        font-size: 50px;
+        margin-top: 50px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: lighter;
+    }
+
+    img[src="Combat_Images/difficulty-1.png"]
+    {
+        display: inline-block;
+        width: 1200;
+        height: 600;
+        margin-left: 110px;
+        margin-top: 30px;
+    }
+
+    .CP6-1
+    {
+        display: inline-block;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 45;
+        font-weight: lighter;
+        width: 90%;
+        text-align: justify;
+        margin-top: 50px;
+        margin-left: 120;
+    }
+
+    .text-center {
+        float: left;
+        white-space: nowrap;
+        margin-left: 260;
+        font-size: 40;
+        color: white;
+        margin-top: 15px;
+    }
+
+    .footer-links {
+        display: inline-block;
+        margin-left: 240;
+        margin-top: 10;
+        text-align: center;
+        width: 1000;
+        padding-bottom: 20px;
+    }
+
+    .footer-links li {
+        display: inline-block;
+        color: white;
+        font-size: 40;
+        text-align: center;
+        margin-top: 10px;
+        padding-left: 10px;
+        white-space: nowrap;
+    }
+
+    .menu_bar ul li 
+    {
+        font-size: 50px;
+    }
+
+    .navlist
+    {
+        width: 70%;
+        height: 137px;
+        display: flex;
+        margin-left: 100px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rightnav {
+        width: 50%;
+        margin-top: 170px;
+        padding: 0px 2px;
+        text-align: center;
+    }
+
+    .navbar {
+        display: flex;
+        height: 400px;
+        transition: all 0.5s ease-out;
+        width: 700px;
+        justify-content: center;
+        flex-direction: column;
+        position: sticky;
+        background-color: transparent;
+        z-index: 1;
+        top: 0;
+        cursor: pointer;
+    }
+
+    .navlist li a {
+        text-decoration: none;
+        font-size: 36px;
+        color: rgb(197, 188, 188);
+    }
+
+    #search {
+        width: 100%;
+        height: 49px;
+        background: rgb(50, 50, 50);
+        padding: 5px;
+        margin-left: 166px;
+        margin-top: 20px;
+        font-size: 35px;
+        border: 2px solid grey;
+        border-radius: 5px;
+    }
+
+    .burger
+    {
+        display: block;
+    }
+
+    .h-nav-resp
+    {
+        height: 102px;
+    }
+
+    .v-class-resp
+    {
+        opacity: 0;
+    }
+}
